@@ -1,0 +1,153 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:{first_name}-{last_name}-{###}",
+ "creation": "2025-03-27 22:06:34.411913",
+ "default_view": "Dashboard",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_info_tab",
+  "photo",
+  "amended_from",
+  "first_name",
+  "last_name",
+  "gender",
+  "date_of_birth",
+  "memeber_ship_fee",
+  "phone",
+  "email",
+  "registration_date",
+  "additional_info_tab",
+  "emergency_conact_section",
+  "emergency_contact_name",
+  "emergency_phone"
+ ],
+ "fields": [
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Mewacho Member",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "basic_info_tab",
+   "fieldtype": "Tab Break",
+   "label": "Basic Info"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "memeber_ship_fee",
+   "fieldtype": "Float",
+   "label": "Memeber Ship Fee"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Phone",
+   "label": "Phone"
+  },
+  {
+   "default": "0",
+   "fieldname": "gender",
+   "fieldtype": "Check",
+   "label": "Gender",
+   "options": "Male\nFemale"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date Of Birth"
+  },
+  {
+   "fieldname": "registration_date",
+   "fieldtype": "Datetime",
+   "label": "Registration Date"
+  },
+  {
+   "fieldname": "additional_info_tab",
+   "fieldtype": "Tab Break",
+   "label": "Additional Info"
+  },
+  {
+   "fieldname": "emergency_conact_section",
+   "fieldtype": "Section Break",
+   "label": "Emergency Conact"
+  },
+  {
+   "fieldname": "emergency_contact_name",
+   "fieldtype": "Data",
+   "label": "Emergency Contact Name"
+  },
+  {
+   "fieldname": "emergency_phone",
+   "fieldtype": "Data",
+   "label": "Emergency Phone"
+  },
+  {
+   "fieldname": "photo",
+   "fieldtype": "Attach Image",
+   "label": "Photo"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  }
+ ],
+ "grid_page_length": 50,
+ "image_field": "photo",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-27 23:10:33.383719",
+ "modified_by": "Administrator",
+ "module": "Mewacho",
+ "name": "Mewacho Member",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "mewacho-manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

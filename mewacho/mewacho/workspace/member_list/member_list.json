@@ -1,0 +1,60 @@
+{
+ "app": "Mewacho",
+ "charts": [
+  {
+   "chart_name": "Monthly Member Registration",
+   "label": "Monthly Member Registration"
+  }
+ ],
+ "content": "[{\"id\":\"-MnLDGmGEp\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Members\",\"col\":4}},{\"id\":\"TuzEoI2ak6\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Member List\",\"col\":4}},{\"id\":\"a4tDn8wJde\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Monthly Mewacho\",\"col\":4}},{\"id\":\"FxGjjpvoXn\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Monthly Member Registration\",\"col\":12}}]",
+ "creation": "2025-03-27 23:11:41.742644",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "users",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Member List",
+ "link_to": "Mewacho Member",
+ "link_type": "DocType",
+ "links": [],
+ "modified": "2025-03-27 23:28:04.376703",
+ "modified_by": "Administrator",
+ "module": "Mewacho",
+ "name": "Member List",
+ "number_cards": [
+  {
+   "label": "Members",
+   "number_card_name": "Members"
+  },
+  {
+   "label": "Total Monthly Mewacho",
+   "number_card_name": "Total Monthly Mewacho"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [
+  {
+   "document_type": "Mewacho Member",
+   "label": "Member List",
+   "quick_list_filter": "[]"
+  }
+ ],
+ "roles": [
+  {
+   "role": "Administrator"
+  },
+  {
+   "role": "mewacho-manager"
+  }
+ ],
+ "sequence_id": 24.0,
+ "shortcuts": [],
+ "title": "Member List",
+ "type": "Link"
+}
