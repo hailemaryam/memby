@@ -4,7 +4,7 @@
  "allow_rename": 1,
  "autoname": "format:{first_name}-{last_name}-{###}",
  "creation": "2025-03-27 22:06:34.411913",
- "default_view": "Dashboard",
+ "default_view": "List",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
@@ -108,11 +108,13 @@
    "label": "Email"
   }
  ],
+ "force_re_route_to_default_view": 1,
  "grid_page_length": 50,
  "image_field": "photo",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-03-27 23:10:33.383719",
+ "make_attachments_public": 1,
+ "modified": "2025-03-28 00:05:00.698391",
  "modified_by": "Administrator",
  "module": "Mewacho",
  "name": "Mewacho Member",
@@ -147,6 +149,7 @@
   }
  ],
  "row_format": "Dynamic",
+ "show_name_in_global_search": 1,
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": []

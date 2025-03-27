@@ -1,30 +1,29 @@
 {
- "app": "Mewacho",
+ "app": "mewacho",
  "charts": [
   {
    "chart_name": "Monthly Member Registration",
    "label": "Monthly Member Registration"
   }
  ],
- "content": "[{\"id\":\"-MnLDGmGEp\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Members\",\"col\":4}},{\"id\":\"TuzEoI2ak6\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Member List\",\"col\":4}},{\"id\":\"a4tDn8wJde\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Monthly Mewacho\",\"col\":4}},{\"id\":\"FxGjjpvoXn\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Monthly Member Registration\",\"col\":12}}]",
- "creation": "2025-03-27 23:11:41.742644",
+ "content": "[{\"id\":\"2r_X-c5F54\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Members\",\"col\":4}},{\"id\":\"pWWz-jh-_7\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Monthly Mewacho\",\"col\":4}},{\"id\":\"8nIQmzXZnp\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Latest\",\"col\":4}},{\"id\":\"TkVgswvJII\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Monthly Member Registration\",\"col\":12}}]",
+ "creation": "2025-03-27 23:45:12.381887",
  "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
  "for_user": "",
  "hide_custom": 0,
- "icon": "users",
+ "icon": "grid",
  "idx": 0,
  "indicator_color": "green",
  "is_hidden": 0,
- "label": "Member List",
- "link_to": "Mewacho Member",
+ "label": "Home",
  "link_type": "DocType",
  "links": [],
- "modified": "2025-03-27 23:28:04.376703",
+ "modified": "2025-03-28 00:17:16.593589",
  "modified_by": "Administrator",
  "module": "Mewacho",
- "name": "Member List",
+ "name": "Home",
  "number_cards": [
   {
    "label": "Members",
@@ -41,7 +40,7 @@
  "quick_lists": [
   {
    "document_type": "Mewacho Member",
-   "label": "Member List",
+   "label": "Latest",
    "quick_list_filter": "[]"
   }
  ],
@@ -53,8 +52,8 @@
    "role": "mewacho-manager"
   }
  ],
- "sequence_id": 24.0,
+ "sequence_id": 25.0,
  "shortcuts": [],
- "title": "Member List",
- "type": "Link"
+ "title": "Home",
+ "type": "Workspace"
 }
