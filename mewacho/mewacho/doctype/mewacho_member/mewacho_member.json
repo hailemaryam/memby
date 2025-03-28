@@ -10,31 +10,30 @@
  "field_order": [
   "basic_info_tab",
   "photo",
-  "amended_from",
+  "nick_name",
   "first_name",
   "last_name",
   "gender",
   "date_of_birth",
+  "column_break_3efh",
   "memeber_ship_fee",
   "phone",
   "email",
+  "registration_fee",
+  "is_paid",
   "registration_date",
+  "payment_term_tab",
+  "payment_terms",
+  "penality_list_tab",
+  "penality_list",
+  "relatives_tab",
+  "relative_list",
   "additional_info_tab",
   "emergency_conact_section",
   "emergency_contact_name",
   "emergency_phone"
  ],
  "fields": [
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Mewacho Member",
-   "print_hide": 1,
-   "read_only": 1,
-   "search_index": 1
-  },
   {
    "fieldname": "basic_info_tab",
    "fieldtype": "Tab Break",
@@ -62,9 +61,9 @@
    "label": "Memeber Ship Fee"
   },
   {
-   "default": "0921306793",
+   "default": "+2519",
    "fieldname": "phone",
-   "fieldtype": "Phone",
+   "fieldtype": "Data",
    "in_filter": 1,
    "in_list_view": 1,
    "in_preview": 1,
@@ -104,9 +103,9 @@
    "label": "Emergency Contact Name"
   },
   {
-   "default": "0900000000",
+   "default": "+251",
    "fieldname": "emergency_phone",
-   "fieldtype": "Phone",
+   "fieldtype": "Data",
    "label": "Emergency Phone"
   },
   {
@@ -119,6 +118,61 @@
    "fieldname": "email",
    "fieldtype": "Data",
    "label": "Email"
+  },
+  {
+   "fieldname": "penality_list_tab",
+   "fieldtype": "Tab Break",
+   "label": "Penality"
+  },
+  {
+   "fieldname": "penality_list",
+   "fieldtype": "Table",
+   "label": "Penality List",
+   "options": "Mewacho Penality"
+  },
+  {
+   "fieldname": "payment_term_tab",
+   "fieldtype": "Tab Break",
+   "label": "Payment Term"
+  },
+  {
+   "fieldname": "payment_terms",
+   "fieldtype": "Table",
+   "label": "Payment Terms",
+   "options": "Mewacho Payment Term",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3efh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "relatives_tab",
+   "fieldtype": "Tab Break",
+   "label": "Relatives"
+  },
+  {
+   "fieldname": "relative_list",
+   "fieldtype": "Table",
+   "label": "Relative List",
+   "options": "Mewacho Member Relatives"
+  },
+  {
+   "fieldname": "registration_fee",
+   "fieldtype": "Currency",
+   "label": "Registration Fee"
+  },
+  {
+   "default": "0",
+   "depends_on": "registration_fee",
+   "fieldname": "is_paid",
+   "fieldtype": "Check",
+   "label": "Is Paid"
+  },
+  {
+   "fieldname": "nick_name",
+   "fieldtype": "Data",
+   "label": "Nick Name"
   }
  ],
  "grid_page_length": 50,
@@ -126,7 +180,7 @@
  "index_web_pages_for_search": 1,
  "links": [],
  "make_attachments_public": 1,
- "modified": "2025-03-28 15:19:47.560881",
+ "modified": "2025-03-28 19:08:48.842844",
  "modified_by": "Administrator",
  "module": "Mewacho",
  "name": "Mewacho Member",
