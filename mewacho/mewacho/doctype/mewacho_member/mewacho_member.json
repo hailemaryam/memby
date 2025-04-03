@@ -139,8 +139,7 @@
    "fieldname": "payment_terms",
    "fieldtype": "Table",
    "label": "Payment Terms",
-   "options": "Mewacho Payment Term",
-   "read_only": 1
+   "options": "Mewacho Payment Term"
   },
   {
    "fieldname": "column_break_3efh",
@@ -180,7 +179,7 @@
  "index_web_pages_for_search": 1,
  "links": [],
  "make_attachments_public": 1,
- "modified": "2025-03-28 20:40:40.383460",
+ "modified": "2025-04-03 14:42:44.079753",
  "modified_by": "Administrator",
  "module": "Mewacho",
  "name": "Mewacho Member",

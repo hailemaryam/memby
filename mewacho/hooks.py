@@ -237,3 +237,9 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+# hooks.py
+scheduler_events = {
+    "weekly": [
+        "mewacho.mewacho.my_custom_functions.payment_term_creator.create_payment_terms_for_members"
+    ]
+}
