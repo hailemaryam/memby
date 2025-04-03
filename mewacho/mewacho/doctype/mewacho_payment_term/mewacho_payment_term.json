@@ -8,10 +8,11 @@
  "engine": "InnoDB",
  "field_order": [
   "section_break_xx9b",
-  "from",
-  "to",
+  "start_date",
+  "end_date",
   "amount",
-  "is_paid"
+  "is_paid",
+  "penalized"
  ],
  "fields": [
   {
@@ -32,24 +33,30 @@
    "label": "Is Paid"
   },
   {
-   "fieldname": "from",
+   "fieldname": "start_date",
    "fieldtype": "Date",
    "hide_seconds": 1,
    "in_list_view": 1,
-   "label": "From"
+   "label": "Start Date"
   },
   {
-   "fieldname": "to",
+   "fieldname": "end_date",
    "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "To"
+   "label": "End Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "penalized",
+   "fieldtype": "Check",
+   "label": "penalized"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-04-03 14:17:40.297777",
+ "modified": "2025-04-03 19:47:36.035312",
  "modified_by": "Administrator",
  "module": "Mewacho",
  "name": "Mewacho Payment Term",

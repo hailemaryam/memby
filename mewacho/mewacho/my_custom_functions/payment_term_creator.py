@@ -6,7 +6,7 @@ def create_payment_terms_for_members():
     members = frappe.get_all('Mewacho Member', filters={'registration_date': ['is', 'set']})    
     for member in members:
         member_doc = frappe.get_doc('Mewacho Member', member.name)
-        existing_terms = frappe.get_all('Mewacho Payment Term', filters={'parent': member.name}, order_by='`to` desc')
+        existing_terms = frappe.get_all('Mewacho Payment Term', filters={'parent': member.name}, order_by='end_date desc')
         if not existing_terms:
             if member_doc.registration_date.date() > getdate():
                 frappe.log_error(f"Skipping Payment Term creation for Member: {member.name} due to future registration date.", "Payment Term Creation")
@@ -29,8 +29,8 @@ def create_payment_terms(member, start_date):
             'parentfield': 'payment_terms',
             'amount': member.memeber_ship_fee,
             'is_paid': False,
-            'from': start_date,
-            'to': end_date
+            'start_date': start_date,
+            'end_date': end_date
         })
         payment_term.insert(ignore_permissions=True)
         frappe.db.commit()

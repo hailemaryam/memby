@@ -1,7 +1,7 @@
 app_name = "mewacho"
 app_title = "Mewacho"
 app_publisher = "hailemaryammecca@gmail.com"
-app_description = "this app will manage memebers and memebership fee"
+app_description = "this app will manage members and membership fee"
 app_email = "hailemaryammecca@gmail.com"
 app_license = "mit"
 
@@ -240,6 +240,7 @@ app_license = "mit"
 # hooks.py
 scheduler_events = {
     "weekly": [
-        "mewacho.mewacho.my_custom_functions.payment_term_creator.create_payment_terms_for_members"
+        "mewacho.mewacho.my_custom_functions.payment_term_creator.create_payment_terms_for_members",
+        "mewacho.mewacho.my_custom_functions.penality_applier.apply_penalties"
     ]
 }
