@@ -10,7 +10,8 @@
   "reason",
   "amount",
   "status",
-  "created_date"
+  "created_date",
+  "payment_detail"
  ],
  "fields": [
   {
@@ -41,13 +42,20 @@
    "fieldtype": "Date",
    "in_list_view": 1,
    "label": "Created Date"
+  },
+  {
+   "fieldname": "payment_detail",
+   "fieldtype": "Link",
+   "label": "Payment Detail",
+   "options": "Mewacho Payment",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-03-28 17:28:58.661460",
+ "modified": "2025-04-12 15:33:11.217680",
  "modified_by": "Administrator",
  "module": "Mewacho",
  "name": "Mewacho Penality",

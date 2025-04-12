@@ -12,7 +12,8 @@
   "end_date",
   "amount",
   "is_paid",
-  "penalized"
+  "penalized",
+  "payment_detail"
  ],
  "fields": [
   {
@@ -50,13 +51,20 @@
    "fieldname": "penalized",
    "fieldtype": "Check",
    "label": "penalized"
+  },
+  {
+   "fieldname": "payment_detail",
+   "fieldtype": "Link",
+   "label": "Payment Detail",
+   "options": "Mewacho Payment",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-04-04 13:04:44.698892",
+ "modified": "2025-04-12 15:30:40.888949",
  "modified_by": "Administrator",
  "module": "Mewacho",
  "name": "Mewacho Payment Term",

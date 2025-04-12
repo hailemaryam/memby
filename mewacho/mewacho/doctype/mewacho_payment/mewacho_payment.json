@@ -1,29 +1,28 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{bank}-{transaction_id}",
  "creation": "2025-03-28 15:26:27.610615",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "section_break_dvxk",
   "member",
+  "section_break_k19v",
   "bank",
   "amount",
+  "column_break_z2f8",
   "transaction_id",
   "time"
  ],
  "fields": [
   {
-   "fieldname": "section_break_dvxk",
-   "fieldtype": "Section Break"
-  },
-  {
    "fieldname": "bank",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Bank"
+   "label": "Bank",
+   "options": "Mewacho Bank"
   },
   {
    "fieldname": "amount",
@@ -45,21 +44,28 @@
    "label": "Time"
   },
   {
+   "fieldname": "column_break_z2f8",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "member",
    "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
    "label": "Member",
    "options": "Mewacho Member"
+  },
+  {
+   "fieldname": "section_break_k19v",
+   "fieldtype": "Section Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-03-28 15:41:27.752078",
+ "modified": "2025-04-12 14:53:22.940013",
  "modified_by": "Administrator",
  "module": "Mewacho",
  "name": "Mewacho Payment",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
