@@ -13,14 +13,29 @@ class MewachoPayment(Document):
 		member_doc = frappe.get_doc('Mewacho Member', self.member)
 		member_doc.total_payment_received += amount
 
+		penalityAllocated = 0
+		paymentTermAllocated = 0
 		for payment_term in member_doc.payment_terms:
 			if not payment_term.is_paid and amount >= payment_term.amount:
 				payment_term.db_set('is_paid', True)
 				amount -= payment_term.amount
+				paymentTermAllocated += payment_term.amount
+
 		for penality in member_doc.penality_list:
 			if penality.status == 'Unpaid' and amount >= penality.amount:
 				penality.db_set('status', 'Paid')
 				amount-= penality.amount
-	
+				penalityAllocated += penality.amount
+
+		member_doc.remaining_total += amount
 		member_doc.save()
-		frappe.msgprint("Payment Status updated Successfully!")
+		printMessage(paymentTermAllocated, penalityAllocated, member_doc.remaining_total)
+
+	def printMessage(paymentTermAllocated, penalityAllocated, remaining_total):
+		frappe.msgprint(
+			"This is allocation of this payment \n"
+			+ "{} allocated for Payment Term \n"
+			+ "{} allocated for Penality \n"
+			+ "remaining amount is {}.".
+			format(paymentTermAllocated, penalityAllocated, remaining_total))
+
