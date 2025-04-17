@@ -1,7 +1,7 @@
 {
  "app": "mewacho",
  "charts": [],
- "content": "[{\"id\":\"IwJa_lxC63\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Memebers\",\"col\":3}},{\"id\":\"3fr4z0fqWC\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Payments\",\"col\":3}},{\"id\":\"3KyhulGKSs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Banks\",\"col\":3}},{\"id\":\"1X53IKVCCQ\",\"type\":\"spacer\",\"data\":{\"col\":12}}]",
+ "content": "[{\"id\":\"IwJa_lxC63\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Memebers\",\"col\":3}},{\"id\":\"3fr4z0fqWC\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Un Submitted Payments\",\"col\":5}},{\"id\":\"3KyhulGKSs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Bank Accounts\",\"col\":3}},{\"id\":\"1X53IKVCCQ\",\"type\":\"spacer\",\"data\":{\"col\":12}}]",
  "creation": "2025-03-27 23:45:12.381887",
  "custom_blocks": [],
  "docstatus": 0,
@@ -9,13 +9,13 @@
  "for_user": "",
  "hide_custom": 0,
  "icon": "grid",
- "idx": 0,
+ "idx": 4,
  "indicator_color": "green",
  "is_hidden": 0,
  "label": "Home",
  "link_type": "DocType",
  "links": [],
- "modified": "2025-04-17 14:45:33.900509",
+ "modified": "2025-04-17 21:53:05.577081",
  "modified_by": "Administrator",
  "module": "Mewacho",
  "name": "Home",
@@ -37,15 +37,7 @@
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "Memebers",
-   "link_to": "Mewacho Member",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Banks",
+   "label": "Bank Accounts",
    "link_to": "Mewacho Bank",
    "stats_filter": "[]",
    "type": "DocType"
@@ -53,9 +45,17 @@
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "Payments",
+   "label": "Un Submitted Payments",
    "link_to": "Mewacho Payment",
    "stats_filter": "[[\"Mewacho Payment\",\"docstatus\",\"=\",\"0\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Memebers",
+   "link_to": "Mewacho Member",
+   "stats_filter": "[]",
    "type": "DocType"
   }
  ],
