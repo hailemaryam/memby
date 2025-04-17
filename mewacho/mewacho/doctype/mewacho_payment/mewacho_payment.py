@@ -31,6 +31,9 @@ class MewachoPayment(Document):
 
 		member_doc.remaining_total += amount
 		member_doc.save()
+		bank_doc = frappe.get_doc('Mewacho Bank', self.bank)
+		bank_doc.remaining_balance += self.amount
+		bank_doc.save()
 		message = "From this payment \n"
 		message += "{} allocated for Payment Term and \n".format(paymentTermAllocated)
 		message += "{} allocated for Penality \n".format(penalityAllocated)
