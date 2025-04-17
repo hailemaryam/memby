@@ -1,0 +1,40 @@
+{
+ "app": "mewacho",
+ "charts": [],
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"Payment\"}}]",
+ "creation": "2025-04-17 14:51:22.539069",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "money-coins-1",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Payment",
+ "link_to": "Mewacho Payment",
+ "link_type": "DocType",
+ "links": [],
+ "modified": "2025-04-17 15:00:04.513971",
+ "modified_by": "Administrator",
+ "module": "Mewacho",
+ "name": "Payment",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Administrator"
+  },
+  {
+   "role": "mewacho-manager"
+  }
+ ],
+ "sequence_id": 27.0,
+ "shortcuts": [],
+ "title": "Payment",
+ "type": "Link"
+}

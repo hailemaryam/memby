@@ -42,10 +42,11 @@
   }
  ],
  "grid_page_length": 50,
+ "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-04-03 16:47:27.192939",
+ "modified": "2025-04-17 21:39:54.120543",
  "modified_by": "Administrator",
  "module": "Mewacho",
  "name": "Mewacho Setting",
@@ -57,7 +58,17 @@
    "email": 1,
    "print": 1,
    "read": 1,
-   "role": "System Manager",
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "mewacho-manager",
    "share": 1,
    "write": 1
   }

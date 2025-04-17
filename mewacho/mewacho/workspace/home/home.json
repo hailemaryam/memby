@@ -1,12 +1,7 @@
 {
  "app": "mewacho",
- "charts": [
-  {
-   "chart_name": "Monthly Member Registration",
-   "label": "Monthly Member Registration"
-  }
- ],
- "content": "[{\"id\":\"2r_X-c5F54\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Members\",\"col\":4}},{\"id\":\"pWWz-jh-_7\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Monthly Mewacho\",\"col\":4}},{\"id\":\"8nIQmzXZnp\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Latest\",\"col\":4}},{\"id\":\"TkVgswvJII\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Monthly Member Registration\",\"col\":12}}]",
+ "charts": [],
+ "content": "[{\"id\":\"IwJa_lxC63\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Memebers\",\"col\":3}},{\"id\":\"3fr4z0fqWC\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Payments\",\"col\":3}},{\"id\":\"3KyhulGKSs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Banks\",\"col\":3}},{\"id\":\"1X53IKVCCQ\",\"type\":\"spacer\",\"data\":{\"col\":12}}]",
  "creation": "2025-03-27 23:45:12.381887",
  "custom_blocks": [],
  "docstatus": 0,
@@ -20,30 +15,15 @@
  "label": "Home",
  "link_type": "DocType",
  "links": [],
- "modified": "2025-03-28 00:17:16.593589",
+ "modified": "2025-04-17 14:45:33.900509",
  "modified_by": "Administrator",
  "module": "Mewacho",
  "name": "Home",
- "number_cards": [
-  {
-   "label": "Members",
-   "number_card_name": "Members"
-  },
-  {
-   "label": "Total Monthly Mewacho",
-   "number_card_name": "Total Monthly Mewacho"
-  }
- ],
+ "number_cards": [],
  "owner": "Administrator",
  "parent_page": "",
  "public": 1,
- "quick_lists": [
-  {
-   "document_type": "Mewacho Member",
-   "label": "Latest",
-   "quick_list_filter": "[]"
-  }
- ],
+ "quick_lists": [],
  "roles": [
   {
    "role": "Administrator"
@@ -53,7 +33,32 @@
   }
  ],
  "sequence_id": 25.0,
- "shortcuts": [],
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Memebers",
+   "link_to": "Mewacho Member",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Banks",
+   "link_to": "Mewacho Bank",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Payments",
+   "link_to": "Mewacho Payment",
+   "stats_filter": "[[\"Mewacho Payment\",\"docstatus\",\"=\",\"0\",false]]",
+   "type": "DocType"
+  }
+ ],
  "title": "Home",
  "type": "Workspace"
 }
