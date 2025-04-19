@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class MewachoPenality(Document):
+class MewachoMonthlyPayment(Document):
 	pass
