@@ -4,7 +4,7 @@
 import frappe
 from frappe.model.document import Document
 
-class MewachoPayment(Document):
+class MewachoPayment(Document): 
 	def on_submit(self):
 		if not self.amount or not self.member:
 			frappe.throw("Amount and Member are required.")
@@ -15,19 +15,19 @@ class MewachoPayment(Document):
 
 		penalityAllocated = 0
 		paymentTermAllocated = 0
-		for payment_term in member_doc.payment_terms:
+		for payment_term in member_doc.monthly_payments:
 			if not payment_term.is_paid and amount >= payment_term.amount:
 				payment_term.db_set('is_paid', True)
 				amount -= payment_term.amount
 				paymentTermAllocated += payment_term.amount
 				member_doc.unpaid_total -= payment_term.amount
 
-		for penality in member_doc.penality_list:
-			if penality.status == 'Unpaid' and amount >= penality.amount:
-				penality.db_set('status', 'Paid')
-				amount-= penality.amount
-				penalityAllocated += penality.amount
-				member_doc.unpaid_total -= penality.amount
+		for other_payment in member_doc.other_payments:
+			if other_payment.status == 'Unpaid' and amount >= other_payment.amount:
+				other_payment.db_set('status', 'Paid')
+				amount-= other_payment.amount
+				penalityAllocated += other_payment.amount
+				member_doc.unpaid_total -= other_payment.amount
 
 		member_doc.remaining_total += amount
 		member_doc.save()
@@ -35,7 +35,9 @@ class MewachoPayment(Document):
 		bank_doc.remaining_balance += self.amount
 		bank_doc.save()
 		message = "From this payment \n"
-		message += "{} allocated for Payment Term and \n".format(paymentTermAllocated)
-		message += "{} allocated for Penality \n".format(penalityAllocated)
+		message += "<br>"
+		message += "{} allocated for Monthly Payment and \n".format(paymentTermAllocated)
+		message += "<br>"
+		message += "{} allocated for Other unpaid payments \n".format(penalityAllocated)
 		frappe.msgprint(message)
 

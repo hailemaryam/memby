@@ -2,25 +2,25 @@ import frappe
 from datetime import datetime, timedelta
 from frappe.utils import getdate, add_days, today
 
-@frappe.whitelist()
+@frappe.whitelist() 
 def apply_penalties():
     # Get Mewacho Setting
     setting = frappe.get_single("Mewacho Setting")
     for term in getUnPaidUnPenalizedTerms():
-        payment_term = frappe.get_doc("Mewacho Payment Term", term.name)
+        payment_term = frappe.get_doc("Mewacho Monthly Payment", term.name)
         if (getdate() - payment_term.end_date).days >= setting.no_of_days_before_penality:
             member_doc = frappe.get_doc('Mewacho Member', payment_term.parent)
             penalty_value = CalculatePenality(payment_term, setting)
             savePenalityAndMemeberDoc(member_doc, payment_term, penalty_value)
-            payment_term = frappe.get_doc("Mewacho Payment Term", term.name)
+            payment_term = frappe.get_doc("Mewacho Monthly Payment", term.name)
             payment_term.penalized = 1
             payment_term.save()
 
 def savePenalityAndMemeberDoc(member_doc, payment_term, penalty_value):
-    penalty_doc = frappe.new_doc("Mewacho Penality")
+    penalty_doc = frappe.new_doc("Mewacho Other Payment")
     penalty_doc.parent = payment_term.parent  # Member name
     penalty_doc.parenttype = 'Mewacho Member'  # Parent DocType
-    penalty_doc.parentfield = 'penality_list'  # Child table field in Mewacho Member
+    penalty_doc.parentfield = 'other_payments'  # Child table field in Mewacho Member
     penalty_doc.reason = "Penalty for overdue payment term from {} to {}".format(
         str(payment_term.start_date) if payment_term.start_date else "N/A", 
         str(payment_term.end_date) if payment_term.end_date else "N/A"
@@ -28,7 +28,7 @@ def savePenalityAndMemeberDoc(member_doc, payment_term, penalty_value):
     penalty_doc.amount = penalty_value
     penalty_doc.status = getPaymentStatusAndUpdatePaymentInfo(member_doc, penalty_value)
     penalty_doc.created_date = getdate()
-    member_doc.append('penality_list', penalty_doc)
+    member_doc.append('other_payments', penalty_doc)
     member_doc.save()
 
 def getPaymentStatusAndUpdatePaymentInfo(member_doc, penalty_value):
@@ -43,7 +43,7 @@ def getPaymentStatusAndUpdatePaymentInfo(member_doc, penalty_value):
 def getUnPaidUnPenalizedTerms():
     return frappe.db.sql("""
         SELECT name, start_date, end_date, amount, is_paid, penalized
-        FROM `tabMewacho Payment Term`
+        FROM `tabMewacho Monthly Payment`
         WHERE (is_paid = 0 AND penalized = 0)
     """, as_dict=True)
 

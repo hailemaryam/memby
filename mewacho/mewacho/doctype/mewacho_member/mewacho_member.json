@@ -22,10 +22,10 @@
   "registration_fee",
   "is_paid",
   "registration_date",
-  "payment_term_tab",
-  "payment_terms",
-  "penality_list_tab",
-  "penality_list",
+  "monthly_payments_tab",
+  "monthly_payments",
+  "other_payment_tab",
+  "other_payments",
   "relatives_tab",
   "relative_list",
   "additional_info_tab",
@@ -125,29 +125,6 @@
    "label": "Email"
   },
   {
-   "fieldname": "penality_list_tab",
-   "fieldtype": "Tab Break",
-   "label": "Penality"
-  },
-  {
-   "fieldname": "penality_list",
-   "fieldtype": "Table",
-   "label": "Penality List",
-   "options": "Mewacho Other Payment"
-  },
-  {
-   "fieldname": "payment_term_tab",
-   "fieldtype": "Tab Break",
-   "label": "Payment Term"
-  },
-  {
-   "fieldname": "payment_terms",
-   "fieldtype": "Table",
-   "label": "Payment Terms",
-   "options": "Mewacho Monthly Payment",
-   "read_only": 1
-  },
-  {
    "fieldname": "column_break_3efh",
    "fieldtype": "Column Break"
   },
@@ -213,6 +190,29 @@
    "fieldtype": "Currency",
    "label": "Remaining Total",
    "read_only": 1
+  },
+  {
+   "fieldname": "monthly_payments",
+   "fieldtype": "Table",
+   "label": "Monthly Payments",
+   "options": "Mewacho Monthly Payment",
+   "read_only": 1
+  },
+  {
+   "fieldname": "other_payments",
+   "fieldtype": "Table",
+   "label": "Other Payments",
+   "options": "Mewacho Other Payment"
+  },
+  {
+   "fieldname": "monthly_payments_tab",
+   "fieldtype": "Tab Break",
+   "label": "Monthly Payments"
+  },
+  {
+   "fieldname": "other_payment_tab",
+   "fieldtype": "Tab Break",
+   "label": "Other Payment"
   }
  ],
  "grid_page_length": 50,
@@ -220,7 +220,7 @@
  "index_web_pages_for_search": 1,
  "links": [],
  "make_attachments_public": 1,
- "modified": "2025-04-19 15:36:43.451889",
+ "modified": "2025-04-19 16:05:51.836943",
  "modified_by": "Administrator",
  "module": "Mewacho",
  "name": "Mewacho Member",
