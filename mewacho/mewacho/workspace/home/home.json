@@ -1,7 +1,12 @@
 {
  "app": "mewacho",
- "charts": [],
- "content": "[{\"id\":\"IwJa_lxC63\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Memebers\",\"col\":3}},{\"id\":\"3fr4z0fqWC\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Un Submitted Payments\",\"col\":5}},{\"id\":\"3KyhulGKSs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Bank Accounts\",\"col\":3}},{\"id\":\"1X53IKVCCQ\",\"type\":\"spacer\",\"data\":{\"col\":12}}]",
+ "charts": [
+  {
+   "chart_name": "Monthly Member Registration",
+   "label": "Monthly Member Registration"
+  }
+ ],
+ "content": "[{\"id\":\"IwJa_lxC63\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Memebers\",\"col\":3}},{\"id\":\"3fr4z0fqWC\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Un Submitted Payments\",\"col\":5}},{\"id\":\"3KyhulGKSs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Bank Accounts\",\"col\":3}},{\"id\":\"1X53IKVCCQ\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"KiAv3qn0St\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Members\",\"col\":4}},{\"id\":\"lGfTrjQjQt\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Monthly Mewacho\",\"col\":4}},{\"id\":\"rCEuUGu8E3\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Monthly Member Registration\",\"col\":12}}]",
  "creation": "2025-03-27 23:45:12.381887",
  "custom_blocks": [],
  "docstatus": 0,
@@ -9,17 +14,26 @@
  "for_user": "",
  "hide_custom": 0,
  "icon": "grid",
- "idx": 4,
+ "idx": 5,
  "indicator_color": "green",
  "is_hidden": 0,
  "label": "Home",
  "link_type": "DocType",
  "links": [],
- "modified": "2025-04-17 21:53:05.577081",
+ "modified": "2025-04-20 13:28:47.292758",
  "modified_by": "Administrator",
  "module": "Mewacho",
  "name": "Home",
- "number_cards": [],
+ "number_cards": [
+  {
+   "label": "Members",
+   "number_card_name": "Members"
+  },
+  {
+   "label": "Total Monthly Mewacho",
+   "number_card_name": "Total Monthly Mewacho"
+  }
+ ],
  "owner": "Administrator",
  "parent_page": "",
  "public": 1,
