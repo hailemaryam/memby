@@ -6,15 +6,15 @@ from frappe.utils import getdate, add_days, today
 def apply_penalties():
     # Get Mewacho Setting
     setting = frappe.get_single("Mewacho Setting")
-    for term in getUnPaidUnPenalizedTerms():
+    last_penality_date = datetime.now() - timedelta(days=setting.no_of_days_before_penality)
+    for term in getUnPaidUnPenalizedTerms(last_penality_date):
         payment_term = frappe.get_doc("Mewacho Monthly Payment", term.name)
-        if (getdate() - payment_term.end_date).days >= setting.no_of_days_before_penality:
-            member_doc = frappe.get_doc('Mewacho Member', payment_term.parent)
-            penalty_value = CalculatePenality(payment_term, setting)
-            savePenalityAndMemeberDoc(member_doc, payment_term, penalty_value)
-            payment_term = frappe.get_doc("Mewacho Monthly Payment", term.name)
-            payment_term.penalized = 1
-            payment_term.save()
+        member_doc = frappe.get_doc('Mewacho Member', payment_term.parent)
+        penalty_value = CalculatePenality(payment_term, setting)
+        savePenalityAndMemeberDoc(member_doc, payment_term, penalty_value)
+        payment_term = frappe.get_doc("Mewacho Monthly Payment", term.name)
+        payment_term.penalized = 1
+        payment_term.save()
 
 def savePenalityAndMemeberDoc(member_doc, payment_term, penalty_value):
     penalty_doc = frappe.new_doc("Mewacho Other Payment")
@@ -40,12 +40,12 @@ def getPaymentStatusAndUpdatePaymentInfo(member_doc, penalty_value):
         member_doc.unpaid_total += penalty_value
     return paymentStatus
 
-def getUnPaidUnPenalizedTerms():
+def getUnPaidUnPenalizedTerms(last_penality_date):
     return frappe.db.sql("""
         SELECT name, start_date, end_date, amount, is_paid, penalized
         FROM `tabMewacho Monthly Payment`
-        WHERE (is_paid = 0 AND penalized = 0)
-    """, as_dict=True)
+        WHERE (is_paid = 0 AND penalized = 0) AND end_date <= %s
+    """, (last_penality_date,), as_dict=True)
 
 def CalculatePenality(payment_term, setting):
     # Calculate the penalty
