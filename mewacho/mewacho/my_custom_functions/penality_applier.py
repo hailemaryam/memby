@@ -11,12 +11,12 @@ def apply_penalties():
         payment_term = frappe.get_doc("Mewacho Monthly Payment", term.name)
         member_doc = frappe.get_doc('Mewacho Member', payment_term.parent)
         penalty_value = CalculatePenality(payment_term, setting)
-        savePenalityAndMemeberDoc(member_doc, payment_term, penalty_value)
+        savePenality(member_doc, payment_term, penalty_value)
         payment_term = frappe.get_doc("Mewacho Monthly Payment", term.name)
         payment_term.penalized = 1
         payment_term.save()
 
-def savePenalityAndMemeberDoc(member_doc, payment_term, penalty_value):
+def savePenality(member_doc, payment_term, penalty_value):
     penalty_doc = frappe.new_doc("Mewacho Other Payment")
     penalty_doc.parent = payment_term.parent  # Member name
     penalty_doc.parenttype = 'Mewacho Member'  # Parent DocType
@@ -26,19 +26,10 @@ def savePenalityAndMemeberDoc(member_doc, payment_term, penalty_value):
         str(payment_term.end_date) if payment_term.end_date else "N/A"
     )
     penalty_doc.amount = penalty_value
-    penalty_doc.status = getPaymentStatusAndUpdatePaymentInfo(member_doc, penalty_value)
+    penalty_doc.status = "Unpaid"
     penalty_doc.created_date = getdate()
     member_doc.append('other_payments', penalty_doc)
     member_doc.save()
-
-def getPaymentStatusAndUpdatePaymentInfo(member_doc, penalty_value):
-    paymentStatus = "Unpaid"
-    if member_doc.remaining_total >= penalty_value:
-        paymentStatus = 'Paid'
-        member_doc.remaining_total -= penalty_value
-    else:
-        member_doc.unpaid_total += penalty_value
-    return paymentStatus
 
 def getUnPaidUnPenalizedTerms(last_penality_date):
     return frappe.db.sql("""

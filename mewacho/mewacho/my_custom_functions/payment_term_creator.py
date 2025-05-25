@@ -10,22 +10,17 @@ def create_payment_terms(member):
     start_date = member.last_created_end_date or member.registration_date
     while start_date < getdate():
         end_date = add_days(start_date, 30)
-        is_paid = member.remaining_total >= member.membership_fee
         payment_term = frappe.get_doc({
             'doctype': 'Mewacho Monthly Payment',
             'parent': member.name,
             'parenttype': 'Mewacho Member',
             'parentfield': 'monthly_payments',
             'amount': member.membership_fee,
-            'is_paid': is_paid,
+            'is_paid': False,
             'penalized': False,
             'start_date': start_date,
             'end_date': end_date
         })
-        if is_paid:
-            member.remaining_total -= member.membership_fee
-        else:
-            member.unpaid_total += member.membership_fee
         member.append('monthly_payments', payment_term)
         start_date = end_date
     member.last_created_end_date = start_date
