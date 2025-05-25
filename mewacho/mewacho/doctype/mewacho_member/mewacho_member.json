@@ -212,7 +212,7 @@
  "index_web_pages_for_search": 1,
  "links": [],
  "make_attachments_public": 1,
- "modified": "2025-05-21 09:32:52.647153",
+ "modified": "2025-05-25 18:05:01.744395",
  "modified_by": "Administrator",
  "module": "Mewacho",
  "name": "Mewacho Member",
@@ -250,5 +250,7 @@
  "show_name_in_global_search": 1,
  "sort_field": "creation",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
 }

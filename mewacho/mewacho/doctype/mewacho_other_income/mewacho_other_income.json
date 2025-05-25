@@ -1,26 +1,24 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{bank_account}-{transaction_id}",
- "creation": "2025-05-25 10:01:35.927642",
+ "autoname": "format:{banck_account}-{transaction_id}",
+ "creation": "2025-05-25 17:43:56.002358",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_d9ms",
-  "expense_category",
+  "amended_from",
+  "income_source_name",
   "description",
-  "column_break_q9t8",
+  "column_break_xsze",
   "bank_account",
   "transaction_id",
-  "date",
   "amount",
-  "section_break_nlgq",
-  "item_list",
-  "amended_from"
+  "date",
+  "section_break_fawb"
  ],
  "fields": [
   {
-   "fieldname": "section_break_d9ms",
+   "fieldname": "section_break_fawb",
    "fieldtype": "Section Break"
   },
   {
@@ -28,19 +26,24 @@
    "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
-   "options": "Mewacho Expense",
+   "options": "Mewacho Other Income",
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
   },
   {
-   "fieldname": "expense_category",
-   "fieldtype": "Link",
-   "label": "Expense Category",
-   "options": "Mewacho Expense Category"
+   "fieldname": "income_source_name",
+   "fieldtype": "Data",
+   "label": "Income Source Name"
   },
   {
-   "fieldname": "column_break_q9t8",
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description",
+   "max_height": "80px"
+  },
+  {
+   "fieldname": "column_break_xsze",
    "fieldtype": "Column Break"
   },
   {
@@ -59,13 +62,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "date",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "Date",
-   "reqd": 1
-  },
-  {
    "fieldname": "amount",
    "fieldtype": "Currency",
    "in_list_view": 1,
@@ -73,30 +69,19 @@
    "reqd": 1
   },
   {
-   "fieldname": "section_break_nlgq",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "item_list",
-   "fieldtype": "Table",
-   "label": "Item List",
-   "options": "Mewacho Item"
-  },
-  {
-   "fieldname": "description",
-   "fieldtype": "Long Text",
-   "label": "Description",
-   "max_height": "80px"
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-05-25 17:52:50.223633",
+ "modified": "2025-05-25 17:50:32.362917",
  "modified_by": "Administrator",
  "module": "Mewacho",
- "name": "Mewacho Expense",
+ "name": "Mewacho Other Income",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
