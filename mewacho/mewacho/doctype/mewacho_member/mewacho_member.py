@@ -21,7 +21,7 @@ class MewachoMember(Document):
             elif other_payment.status == "Unpaid":
                 unpaid_total += other_payment.amount
 
-        remaining_total = self.total_payment_received - paid_total
+        remaining_total = self.total_payment_received or 0 - paid_total
 
         # Try to mark some unpaid payments as paid if funds allow
         if remaining_total > 0:
