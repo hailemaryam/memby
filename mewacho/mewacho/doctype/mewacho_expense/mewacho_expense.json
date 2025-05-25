@@ -16,7 +16,11 @@
   "amount",
   "section_break_nlgq",
   "item_list",
-  "amended_from"
+  "amended_from",
+  "people_involved_section",
+  "athorized_by",
+  "paid_by",
+  "item_received_by"
  ],
  "fields": [
   {
@@ -87,13 +91,33 @@
    "fieldtype": "Long Text",
    "label": "Description",
    "max_height": "80px"
+  },
+  {
+   "fieldname": "people_involved_section",
+   "fieldtype": "Section Break",
+   "label": "People Involved"
+  },
+  {
+   "fieldname": "athorized_by",
+   "fieldtype": "Data",
+   "label": "Athorized by"
+  },
+  {
+   "fieldname": "paid_by",
+   "fieldtype": "Data",
+   "label": "Paid by"
+  },
+  {
+   "fieldname": "item_received_by",
+   "fieldtype": "Data",
+   "label": "Item Received by"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-05-25 17:52:50.223633",
+ "modified": "2025-05-25 18:36:44.105623",
  "modified_by": "Administrator",
  "module": "Mewacho",
  "name": "Mewacho Expense",
