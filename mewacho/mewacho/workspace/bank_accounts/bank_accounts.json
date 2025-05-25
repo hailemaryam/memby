@@ -16,7 +16,7 @@
  "link_to": "Mewacho Bank",
  "link_type": "DocType",
  "links": [],
- "modified": "2025-04-17 15:02:15.716181",
+ "modified": "2025-05-25 14:18:35.069600",
  "modified_by": "Administrator",
  "module": "Mewacho",
  "name": "Bank Accounts",
@@ -33,7 +33,7 @@
    "role": "mewacho-manager"
   }
  ],
- "sequence_id": 28.0,
+ "sequence_id": 29.0,
  "shortcuts": [],
  "title": "Bank Accounts",
  "type": "Link"
