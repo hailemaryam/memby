@@ -11,8 +11,3 @@ class MewachoExpense(Document):
 		bank_doc = frappe.get_doc('Mewacho Bank', self.bank_account)
 		bank_doc.remaining_balance -= self.amount
 		bank_doc.save()
-
-    def on_cancel(self):
-        bank_doc = frappe.get_doc('Mewacho Bank', self.bank_account)
-        bank_doc.remaining_balance += self.amount
-        bank_doc.save()
