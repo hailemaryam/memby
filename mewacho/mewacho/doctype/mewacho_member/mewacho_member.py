@@ -6,6 +6,9 @@ from frappe.website.website_generator import WebsiteGenerator
 
 class MewachoMember(WebsiteGenerator):
     def validate(self):
+        self.title = self.full_name
+        self.route = self.name
+        self.is_published = True
         calculate_remaining_and_unpaid_total(self)
         mark_unpaid_payments(self)
 
