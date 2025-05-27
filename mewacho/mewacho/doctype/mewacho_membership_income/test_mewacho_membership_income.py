@@ -12,18 +12,18 @@ EXTRA_TEST_RECORD_DEPENDENCIES = []  # eg. ["User"]
 IGNORE_TEST_RECORD_DEPENDENCIES = []  # eg. ["User"]
 
 
-class UnitTestMewachoPayment(UnitTestCase):
+class UnitTestMewachoMembershipIncome(UnitTestCase):
 	"""
-	Unit tests for MewachoPayment.
+	Unit tests for MewachoMembershipIncome.
 	Use this class for testing individual functions and methods.
 	"""
 
 	pass
 
 
-class IntegrationTestMewachoPayment(IntegrationTestCase):
+class IntegrationTestMewachoMembershipIncome(IntegrationTestCase):
 	"""
-	Integration tests for MewachoPayment.
+	Integration tests for MewachoMembershipIncome.
 	Use this class for testing interactions between multiple components.
 	"""
 

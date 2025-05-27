@@ -189,16 +189,19 @@
    "default": "0",
    "fieldname": "is_published",
    "fieldtype": "Check",
+   "hidden": 1,
    "label": "Is Published"
   },
   {
    "fieldname": "title",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "title"
   },
   {
    "fieldname": "route",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "route"
   },
   {
@@ -217,7 +220,7 @@
  "is_published_field": "is_published",
  "links": [],
  "make_attachments_public": 1,
- "modified": "2025-05-26 15:49:21.857232",
+ "modified": "2025-05-27 23:50:38.686868",
  "modified_by": "Administrator",
  "module": "Mewacho",
  "name": "Mewacho Member",

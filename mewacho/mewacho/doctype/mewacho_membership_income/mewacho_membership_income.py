@@ -4,7 +4,7 @@
 import frappe
 from frappe.model.document import Document
 
-class MewachoPayment(Document): 
+class MewachoMembershipIncome(Document): 
 	def on_submit(self):
 		if not self.amount or not self.member:
 			frappe.throw("Amount and Member are required.")

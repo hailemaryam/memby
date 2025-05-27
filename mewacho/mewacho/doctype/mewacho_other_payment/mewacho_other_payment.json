@@ -47,7 +47,7 @@
    "fieldname": "payment_detail",
    "fieldtype": "Link",
    "label": "Payment Detail",
-   "options": "Mewacho Payment",
+   "options": "Mewacho Membership Income",
    "read_only": 1
   }
  ],
@@ -55,7 +55,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-04-13 07:04:24.277666",
+ "modified": "2025-05-26 17:03:38.557622",
  "modified_by": "Administrator",
  "module": "Mewacho",
  "name": "Mewacho Other Payment",
