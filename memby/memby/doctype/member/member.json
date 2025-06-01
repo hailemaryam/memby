@@ -220,7 +220,7 @@
  "is_published_field": "is_published",
  "links": [],
  "make_attachments_public": 1,
- "modified": "2025-05-29 09:06:40.184554",
+ "modified": "2025-06-01 15:49:49.941672",
  "modified_by": "Administrator",
  "module": "Memby",
  "name": "Member",
@@ -235,7 +235,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "System Manager",
+   "role": "Administrator",
    "select": 1,
    "share": 1,
    "write": 1

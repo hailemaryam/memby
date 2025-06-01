@@ -73,7 +73,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-05-29 09:12:20.842626",
+ "modified": "2025-06-01 15:50:09.880951",
  "modified_by": "Administrator",
  "module": "Memby",
  "name": "Membership Income",
@@ -88,7 +88,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "System Manager",
+   "role": "Administrator",
    "share": 1,
    "write": 1
   },

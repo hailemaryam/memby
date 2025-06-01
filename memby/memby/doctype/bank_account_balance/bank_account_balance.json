@@ -38,7 +38,7 @@
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-01 09:00:24.950980",
+ "modified": "2025-06-01 15:50:51.177911",
  "modified_by": "Administrator",
  "module": "Memby",
  "name": "Bank Account Balance",
@@ -53,7 +53,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "System Manager",
+   "role": "Administrator",
    "share": 1,
    "write": 1
   },
@@ -65,7 +65,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "memby-manager",
+   "role": "memby-finance",
    "share": 1,
    "write": 1
   }
