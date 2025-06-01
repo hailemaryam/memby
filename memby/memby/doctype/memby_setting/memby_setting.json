@@ -46,7 +46,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-04-17 21:39:54.120543",
+ "modified": "2025-06-01 08:59:53.125386",
  "modified_by": "Administrator",
  "module": "Memby",
  "name": "Memby Setting",
@@ -76,5 +76,6 @@
  "row_format": "Dynamic",
  "sort_field": "creation",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }
