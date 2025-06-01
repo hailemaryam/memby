@@ -6,6 +6,7 @@
  "engine": "InnoDB",
  "field_order": [
   "section_break_b8cd",
+  "company_logo",
   "no_of_days_before_penality",
   "penality_based_on",
   "penality_percent",
@@ -39,6 +40,11 @@
    "fieldname": "penality_amount",
    "fieldtype": "Float",
    "label": "Penality Amount"
+  },
+  {
+   "fieldname": "company_logo",
+   "fieldtype": "Attach Image",
+   "label": "Company Logo"
   }
  ],
  "grid_page_length": 50,
@@ -46,7 +52,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-06-01 15:48:10.304991",
+ "modified": "2025-06-01 18:16:32.617010",
  "modified_by": "Administrator",
  "module": "Memby",
  "name": "Memby Setting",
