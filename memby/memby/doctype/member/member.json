@@ -16,6 +16,7 @@
   "gender",
   "date_of_birth",
   "column_break_3efh",
+  "status",
   "membership_fee",
   "phone",
   "email",
@@ -212,6 +213,13 @@
    "in_standard_filter": 1,
    "label": "Full Name",
    "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nDe active\nRemoved",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
@@ -220,7 +228,7 @@
  "is_published_field": "is_published",
  "links": [],
  "make_attachments_public": 1,
- "modified": "2025-06-01 15:49:49.941672",
+ "modified": "2025-06-01 17:44:57.954503",
  "modified_by": "Administrator",
  "module": "Memby",
  "name": "Member",
