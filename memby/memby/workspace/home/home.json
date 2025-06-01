@@ -43,9 +43,19 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Bank Account balance",
+   "link_count": 0,
+   "link_to": "Bank Account Balance",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2025-05-30 17:22:00.633295",
+ "modified": "2025-06-01 09:34:43.716323",
  "modified_by": "Administrator",
  "module": "Memby",
  "name": "home",
