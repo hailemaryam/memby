@@ -16,7 +16,7 @@
  "link_to": "Expense Category",
  "link_type": "DocType",
  "links": [],
- "modified": "2025-05-30 19:00:03.900467",
+ "modified": "2025-06-01 15:59:52.237106",
  "modified_by": "Administrator",
  "module": "Memby",
  "name": "Expense Categories",
@@ -25,7 +25,17 @@
  "parent_page": "",
  "public": 1,
  "quick_lists": [],
- "roles": [],
+ "roles": [
+  {
+   "role": "Administrator"
+  },
+  {
+   "role": "memby-purchasor"
+  },
+  {
+   "role": "memby-finance"
+  }
+ ],
  "sequence_id": 32.0,
  "shortcuts": [],
  "title": "Expense Categories",

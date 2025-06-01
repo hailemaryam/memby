@@ -16,7 +16,7 @@
  "link_to": "Member",
  "link_type": "DocType",
  "links": [],
- "modified": "2025-05-30 18:53:13.627427",
+ "modified": "2025-06-01 15:58:01.154205",
  "modified_by": "Administrator",
  "module": "Memby",
  "name": "Member List",
@@ -25,7 +25,17 @@
  "parent_page": "",
  "public": 1,
  "quick_lists": [],
- "roles": [],
+ "roles": [
+  {
+   "role": "Administrator"
+  },
+  {
+   "role": "memby-manager"
+  },
+  {
+   "role": "memby-finance"
+  }
+ ],
  "sequence_id": 29.0,
  "shortcuts": [],
  "title": "Member List",

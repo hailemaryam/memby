@@ -16,7 +16,7 @@
  "link_to": "Memby Setting",
  "link_type": "DocType",
  "links": [],
- "modified": "2025-05-30 19:10:21.337580",
+ "modified": "2025-06-01 15:57:22.506788",
  "modified_by": "Administrator",
  "module": "Memby",
  "name": "Setting",
@@ -25,7 +25,11 @@
  "parent_page": "",
  "public": 1,
  "quick_lists": [],
- "roles": [],
+ "roles": [
+  {
+   "role": "Administrator"
+  }
+ ],
  "sequence_id": 35.0,
  "shortcuts": [],
  "title": "Setting",

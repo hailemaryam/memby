@@ -16,7 +16,7 @@
  "link_to": "Membership Income",
  "link_type": "DocType",
  "links": [],
- "modified": "2025-05-30 18:54:34.459573",
+ "modified": "2025-06-01 15:58:51.449565",
  "modified_by": "Administrator",
  "module": "Memby",
  "name": "Membership Incomes",
@@ -25,7 +25,14 @@
  "parent_page": "",
  "public": 1,
  "quick_lists": [],
- "roles": [],
+ "roles": [
+  {
+   "role": "Administrator"
+  },
+  {
+   "role": "memby-finance"
+  }
+ ],
  "sequence_id": 30.0,
  "shortcuts": [],
  "title": "Membership Incomes",

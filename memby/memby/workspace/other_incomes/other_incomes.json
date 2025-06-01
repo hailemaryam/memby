@@ -16,7 +16,7 @@
  "link_to": "Other Income",
  "link_type": "DocType",
  "links": [],
- "modified": "2025-05-30 18:59:52.680356",
+ "modified": "2025-06-01 15:59:19.729109",
  "modified_by": "Administrator",
  "module": "Memby",
  "name": "Other Incomes",
@@ -25,7 +25,14 @@
  "parent_page": "",
  "public": 1,
  "quick_lists": [],
- "roles": [],
+ "roles": [
+  {
+   "role": "Administrator"
+  },
+  {
+   "role": "memby-finance"
+  }
+ ],
  "sequence_id": 31.0,
  "shortcuts": [],
  "title": "Other Incomes",
