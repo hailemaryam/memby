@@ -1,0 +1,69 @@
+{
+ "app": "memby",
+ "charts": [
+  {
+   "chart_name": "Membership Income",
+   "label": "Membership Income"
+  },
+  {
+   "chart_name": "Other Income",
+   "label": "Other Income"
+  },
+  {
+   "chart_name": "Expences",
+   "label": "Expenses"
+  }
+ ],
+ "content": "[{\"id\":\"hzlvxRM9nf\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Member\",\"col\":4}},{\"id\":\"DBEWEvYaV9\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Female Member\",\"col\":4}},{\"id\":\"cJQwYw30PL\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Male Member\",\"col\":4}},{\"id\":\"KoOjMFnJ4A\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Membership Income\",\"col\":12}},{\"id\":\"J2A-6eK-SN\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Other Income\",\"col\":12}},{\"id\":\"Y3TgdNrIKR\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Expenses\",\"col\":12}}]",
+ "creation": "2025-05-30 17:19:16.542654",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "home",
+ "idx": 1,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Dashboard",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Bank Account balance",
+   "link_count": 0,
+   "link_to": "Bank Account Balance",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-06-01 17:25:03.088523",
+ "modified_by": "Administrator",
+ "module": "Memby",
+ "name": "Dashboard",
+ "number_cards": [
+  {
+   "label": "Female Member",
+   "number_card_name": "Female Member"
+  },
+  {
+   "label": "Total Member",
+   "number_card_name": "Total Member"
+  },
+  {
+   "label": "Male Member",
+   "number_card_name": "Male Member"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 22.0,
+ "shortcuts": [],
+ "title": "Dashboard",
+ "type": "Workspace"
+}
