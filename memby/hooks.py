@@ -244,3 +244,8 @@ scheduler_events = {
         "memby.memby.my_custom_functions.penality_applier.apply_penalties"
     ]
 }
+jinja = {
+    "methods": [
+        "memby.utils.abushahir_date.to_abushahir"
+    ]
+}
