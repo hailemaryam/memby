@@ -19,26 +19,32 @@
   {
    "fieldname": "bank_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Bank Name",
+   "reqd": 1,
    "unique": 1
   },
   {
    "fieldname": "account_number",
    "fieldtype": "Data",
-   "label": "Account Number"
+   "in_list_view": 1,
+   "label": "Account Number",
+   "reqd": 1
   },
   {
    "default": "0",
    "fieldname": "remaining_balance",
    "fieldtype": "Currency",
-   "label": "Remaining Balance"
+   "in_list_view": 1,
+   "label": "Remaining Balance",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-01 15:50:51.177911",
+ "modified": "2025-06-04 12:18:20.801949",
  "modified_by": "Administrator",
  "module": "Memby",
  "name": "Bank Account Balance",

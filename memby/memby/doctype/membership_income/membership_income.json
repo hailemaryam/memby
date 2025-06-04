@@ -23,26 +23,30 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Bank",
-   "options": "Bank Account Balance"
+   "options": "Bank Account Balance",
+   "reqd": 1
   },
   {
    "fieldname": "amount",
    "fieldtype": "Currency",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Amount"
+   "label": "Amount",
+   "reqd": 1
   },
   {
    "fieldname": "transaction_id",
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Transaction Id"
+   "label": "Transaction Id",
+   "reqd": 1
   },
   {
    "fieldname": "time",
    "fieldtype": "Datetime",
-   "label": "Time"
+   "label": "Time",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_z2f8",
@@ -52,7 +56,8 @@
    "fieldname": "member",
    "fieldtype": "Link",
    "label": "Member",
-   "options": "Member"
+   "options": "Member",
+   "reqd": 1
   },
   {
    "fieldname": "section_break_k19v",
@@ -73,7 +78,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-06-01 15:50:09.880951",
+ "modified": "2025-06-04 12:15:30.943149",
  "modified_by": "Administrator",
  "module": "Memby",
  "name": "Membership Income",
