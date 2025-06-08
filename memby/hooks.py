@@ -14,9 +14,9 @@ app_license = "mit"
 add_to_apps_screen = [
 	{
 		"name": "memby",
-		"logo": "/assets/memby/logo.png",
+		"logo": "/assets/memby/Logo.png",
 		"title": "Memby",
-		"route": "/memby"
+		"route": "/app/dashboard"
 		#"has_permission": "memby.api.permission.has_app_permission"
 	}
 ]
