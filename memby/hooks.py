@@ -16,8 +16,8 @@ add_to_apps_screen = [
 		"name": "memby",
 		"logo": "/assets/memby/logo.png",
 		"title": "Memby",
-		"route": "/memby",
-		"has_permission": "memby.api.permission.has_app_permission"
+		"route": "/memby"
+		#"has_permission": "memby.api.permission.has_app_permission"
 	}
 ]
 
