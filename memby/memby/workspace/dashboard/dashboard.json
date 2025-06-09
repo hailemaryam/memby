@@ -14,7 +14,7 @@
    "label": "Expenses"
   }
  ],
- "content": "[{\"id\":\"hzlvxRM9nf\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Member\",\"col\":4}},{\"id\":\"DBEWEvYaV9\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Female Member\",\"col\":4}},{\"id\":\"cJQwYw30PL\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Male Member\",\"col\":4}},{\"id\":\"r97kUbuGHC\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Unpaid Total\",\"col\":4}},{\"id\":\"entDBTSx2d\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Prepayments\",\"col\":4}},{\"id\":\"cBw9Difl-n\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Bank Account Balance\",\"col\":4}},{\"id\":\"KoOjMFnJ4A\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Membership Income\",\"col\":12}},{\"id\":\"J2A-6eK-SN\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Other Income\",\"col\":12}},{\"id\":\"Y3TgdNrIKR\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Expenses\",\"col\":12}}]",
+ "content": "[{\"id\":\"hzlvxRM9nf\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Member\",\"col\":4}},{\"id\":\"DBEWEvYaV9\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Female Member\",\"col\":4}},{\"id\":\"cJQwYw30PL\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Male Member\",\"col\":4}},{\"id\":\"r97kUbuGHC\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Un Collected Total\",\"col\":4}},{\"id\":\"entDBTSx2d\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Prepayments\",\"col\":4}},{\"id\":\"cBw9Difl-n\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Bank Account Balance\",\"col\":4}},{\"id\":\"KoOjMFnJ4A\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Membership Income\",\"col\":12}},{\"id\":\"J2A-6eK-SN\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Other Income\",\"col\":12}},{\"id\":\"Y3TgdNrIKR\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Expenses\",\"col\":12}}]",
  "creation": "2025-05-30 17:19:16.542654",
  "custom_blocks": [],
  "docstatus": 0,
@@ -39,7 +39,7 @@
    "type": "Link"
   }
  ],
- "modified": "2025-06-02 15:55:51.779439",
+ "modified": "2025-06-09 11:58:04.251447",
  "modified_by": "Administrator",
  "module": "Memby",
  "name": "Dashboard",
@@ -49,12 +49,12 @@
    "number_card_name": "Female Member"
   },
   {
-   "label": "Total Prepayments",
-   "number_card_name": "Total Prepayments"
+   "label": "Un Collected Total",
+   "number_card_name": "Unpaid Total"
   },
   {
-   "label": "Unpaid Total",
-   "number_card_name": "Unpaid Total"
+   "label": "Total Prepayments",
+   "number_card_name": "Total Prepayments"
   },
   {
    "label": "Bank Account Balance",
