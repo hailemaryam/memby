@@ -1,0 +1,99 @@
+{% extends "templates/web.html" %}
+
+{% block header %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    html, body {
+        height: 100%;
+        margin: 0;
+        background-color: #f8f9fa;
+    }
+
+    .full-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .redirect-content {
+        max-width: 320px; /* Smaller width */
+        width: 100%;
+        padding: 25px;
+        border-radius: 10px;
+        background-color: #ffffff;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        text-align: center;
+    }
+
+    .redirect-content h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+        color: #343a40;
+        font-weight: 600;
+    }
+
+    .redirect-content p {
+        font-size: 0.95rem;
+        margin-bottom: 1.25rem;
+        color: #6c757d;
+    }
+
+    .form-control-sm {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.6rem;
+    }
+
+    .btn-sm {
+        padding: 6px 16px;
+        font-size: 0.9rem;
+    }
+
+    /* Optional: make the button expand full width */
+    .btn-block {
+        width: 100%;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid full-center">
+    <div class="redirect-content">
+        <h1 class="text-center">በመታወቂያ ቁጥር መፈልጊያ</h1>
+        <p class="text-center">የመታወቂያ ቁጥሮትን በማስገባት ማረጃዎችን ይመልከቱ፡፡</p>
+
+        <input type="text" class="form-control form-control-sm mb-2" id="redirectInput" placeholder="መታውቂያ ቁጥር ያስገቡ" autocomplete="off">
+
+        <button type="button" class="btn btn-primary btn-sm btn-block" id="redirectButton">ቀጥል</button>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const redirectInput = document.getElementById('redirectInput');
+    const redirectButton = document.getElementById('redirectButton');
+
+    redirectButton.addEventListener('click', function () {
+        const inputValue = redirectInput.value.trim();
+        if (inputValue) {
+            window.location.href = `/${encodeURIComponent(inputValue)}`;
+        } else {
+            frappe.show_alert({
+                message: __('እባክዎ መታወቂያ ቁጥር ያስገቡ።'),
+                indicator: 'red'
+            });
+            redirectInput.focus();
+        }
+    });
+
+    redirectInput.addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            redirectButton.click();
+        }
+    });
+
+    redirectInput.focus();
+});
+</script>
+{% endblock %}
