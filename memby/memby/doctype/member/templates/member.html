@@ -37,7 +37,7 @@
       </div>
       <div class="col-md-4 col-6 mb-2">
         <div><strong>ውደፊት የተክፈሉ ክፍያዎች ድምር</strong></div>
-        <div>{{ doc.remaining_total }}</div>
+        <div>{{ 0 if doc.unpaid_total else doc.remaining_total }}</div>
       </div>
     </div>
   </div>
