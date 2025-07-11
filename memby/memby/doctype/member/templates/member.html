@@ -33,7 +33,7 @@
       </div> -->
       <div class="col-md-4 col-6 mb-2">
         <div><strong>ያልተክፈሉ ክፍያዎች ድምር</strong></div>
-        <div>{{ doc.unpaid_total }}</div>
+        <div>{{ (doc.unpaid_total - doc.remaining_total) or 0 }}</div>
       </div>
       <div class="col-md-4 col-6 mb-2">
         <div><strong>ውደፊት የተክፈሉ ክፍያዎች ድምር</strong></div>
