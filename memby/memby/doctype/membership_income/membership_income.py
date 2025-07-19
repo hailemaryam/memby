@@ -24,6 +24,6 @@ class MembershipIncome(Document):
 		member_doc.total_payment_received -= amount
 		member_doc.save()
 		
-		bank_doc = frappe.get_doc('', self.bank)
+		bank_doc = frappe.get_doc('Bank Account Balance', self.bank)
 		bank_doc.remaining_balance -= self.amount
 		bank_doc.save()
