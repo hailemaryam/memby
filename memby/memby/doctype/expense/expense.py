@@ -14,6 +14,6 @@ class Expense(Document):
 		bank_doc.save()
 
 	def on_cancel(self):
-		bank_doc = frappe.get_doc('', self.bank_account)
+		bank_doc = frappe.get_doc('Bank Account Balance', self.bank_account)
 		bank_doc.remaining_balance += self.amount
 		bank_doc.save()
