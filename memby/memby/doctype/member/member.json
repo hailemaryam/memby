@@ -3,7 +3,7 @@
  "allow_guest_to_view": 1,
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "format:{#####}",
+ "autoname": "format:{#######}",
  "creation": "2025-03-27 22:06:34.411913",
  "default_view": "List",
  "doctype": "DocType",
@@ -13,12 +13,14 @@
   "photo",
   "nick_name",
   "full_name",
+  "mothers_name",
   "gender",
   "date_of_birth",
   "column_break_3efh",
   "status",
   "membership_fee",
   "phone",
+  "address",
   "email",
   "registration_date",
   "monthly_payments_tab",
@@ -221,6 +223,16 @@
    "label": "Status",
    "options": "Active\nDe active\nRemoved",
    "reqd": 1
+  },
+  {
+   "fieldname": "mothers_name",
+   "fieldtype": "Data",
+   "label": "Mother's Name"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
   }
  ],
  "grid_page_length": 50,
@@ -229,7 +241,7 @@
  "is_published_field": "is_published",
  "links": [],
  "make_attachments_public": 1,
- "modified": "2025-06-12 15:09:02.496504",
+ "modified": "2025-10-31 23:06:52.429932",
  "modified_by": "Administrator",
  "module": "Memby",
  "name": "Member",

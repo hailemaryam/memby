@@ -8,15 +8,20 @@
   "section_break_b8cd",
   "company_logo",
   "company_name",
+  "penality_info_section",
   "no_of_days_before_penality",
   "penality_based_on",
   "penality_percent",
-  "penality_amount"
+  "penality_amount",
+  "sms_gatway_conf_section",
+  "sms_gateway_user",
+  "sms_gateway_password"
  ],
  "fields": [
   {
    "fieldname": "section_break_b8cd",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Company Info"
   },
   {
    "default": "60",
@@ -51,6 +56,26 @@
    "fieldname": "company_name",
    "fieldtype": "Data",
    "label": "Company Name"
+  },
+  {
+   "fieldname": "penality_info_section",
+   "fieldtype": "Section Break",
+   "label": "Penality info"
+  },
+  {
+   "fieldname": "sms_gatway_conf_section",
+   "fieldtype": "Section Break",
+   "label": "Sms Gatway Conf"
+  },
+  {
+   "fieldname": "sms_gateway_user",
+   "fieldtype": "Data",
+   "label": "Sms Gateway User"
+  },
+  {
+   "fieldname": "sms_gateway_password",
+   "fieldtype": "Data",
+   "label": "Sms Gateway Password"
   }
  ],
  "grid_page_length": 50,
@@ -58,7 +83,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-06-02 10:49:14.941531",
+ "modified": "2025-10-29 16:47:37.039542",
  "modified_by": "Administrator",
  "module": "Memby",
  "name": "Memby Setting",
