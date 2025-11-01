@@ -7,7 +7,6 @@
  "engine": "InnoDB",
  "field_order": [
   "section_break_d9ms",
-  "expense_category",
   "description",
   "column_break_q9t8",
   "bank_account",
@@ -36,13 +35,6 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
-  },
-  {
-   "fieldname": "expense_category",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Expense Category",
-   "options": "Expense Category"
   },
   {
    "fieldname": "column_break_q9t8",
@@ -115,7 +107,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-11-01 22:15:20.616171",
+ "modified": "2025-11-01 22:18:56.818248",
  "modified_by": "Administrator",
  "module": "Memby",
  "name": "Expense",
