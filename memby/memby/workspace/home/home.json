@@ -22,10 +22,10 @@
  "for_user": "",
  "hide_custom": 0,
  "icon": "home",
- "idx": 1,
+ "idx": 2,
  "indicator_color": "green",
  "is_hidden": 0,
- "label": "Dashboard",
+ "label": "Home",
  "link_type": "DocType",
  "links": [
   {
@@ -39,10 +39,10 @@
    "type": "Link"
   }
  ],
- "modified": "2025-06-09 11:58:04.251447",
+ "modified": "2026-02-26 13:40:16.134937",
  "modified_by": "Administrator",
  "module": "Memby",
- "name": "Dashboard",
+ "name": "Home",
  "number_cards": [
   {
    "label": "Female Member",
@@ -76,6 +76,6 @@
  "roles": [],
  "sequence_id": 22.0,
  "shortcuts": [],
- "title": "Dashboard",
+ "title": "Home",
  "type": "Workspace"
 }
