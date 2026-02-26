@@ -1,0 +1,21 @@
+{
+ "app": "memby",
+ "bg_color": "blue",
+ "creation": "2026-02-26 15:54:10.658107",
+ "docstatus": 0,
+ "doctype": "Desktop Icon",
+ "hidden": 0,
+ "icon_type": "App",
+ "idx": 0,
+ "label": "Memby App",
+ "link_to": "Memby Sidebar",
+ "link_type": "Workspace Sidebar",
+ "modified": "2026-02-26 15:57:14.680812",
+ "modified_by": "Administrator",
+ "name": "Memby App",
+ "owner": "Administrator",
+ "restrict_removal": 0,
+ "roles": [],
+ "sidebar": "Memby Sidebar",
+ "standard": 1
+}
