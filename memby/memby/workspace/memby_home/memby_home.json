@@ -25,7 +25,7 @@
  "idx": 2,
  "indicator_color": "green",
  "is_hidden": 0,
- "label": "Home",
+ "label": "Memby Home",
  "link_type": "DocType",
  "links": [
   {
@@ -39,10 +39,10 @@
    "type": "Link"
   }
  ],
- "modified": "2026-02-26 13:40:16.134937",
+ "modified": "2026-02-26 14:06:32.242824",
  "modified_by": "Administrator",
  "module": "Memby",
- "name": "Home",
+ "name": "Memby Home",
  "number_cards": [
   {
    "label": "Female Member",
@@ -76,6 +76,6 @@
  "roles": [],
  "sequence_id": 22.0,
  "shortcuts": [],
- "title": "Home",
+ "title": "Memby Home",
  "type": "Workspace"
 }
