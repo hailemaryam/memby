@@ -81,8 +81,9 @@
  ],
  "modified": "2026-02-26 16:30:31.854249",
  "modified_by": "Administrator",
- "name": "Memby App",
+ "module": "Memby",
+ "name": "Memby",
  "owner": "Administrator",
  "standard": 1,
- "title": "Memby App"
+ "title": "Memby"
 }
