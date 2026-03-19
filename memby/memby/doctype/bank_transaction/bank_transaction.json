@@ -1,0 +1,133 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "autoname": "format:TR{########}",
+    "creation": "2026-03-19 20:00:00.000000",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "message",
+        "section_break_bt",
+        "bank_account_holder",
+        "bank_account_number",
+        "transaction_id",
+        "column_break_bt",
+        "type",
+        "amount",
+        "sender_name",
+        "date",
+        "section_break_ref",
+        "reference_doctype",
+        "reference_name"
+    ],
+    "fields": [
+        {
+            "fieldname": "message",
+            "fieldtype": "Text",
+            "label": "Message",
+            "reqd": 1
+        },
+        {
+            "fieldname": "section_break_bt",
+            "fieldtype": "Section Break"
+        },
+        {
+            "fieldname": "bank_account_holder",
+            "fieldtype": "Data",
+            "label": "Bank Account Holder",
+            "read_only": 1
+        },
+        {
+            "fieldname": "bank_account_number",
+            "fieldtype": "Data",
+            "label": "Bank Account Number",
+            "read_only": 1
+        },
+        {
+            "fieldname": "transaction_id",
+            "fieldtype": "Data",
+            "label": "Transaction Id",
+            "unique": 1
+        },
+        {
+            "fieldname": "column_break_bt",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "type",
+            "fieldtype": "Select",
+            "label": "Type",
+            "options": "Debit\nCredit"
+        },
+        {
+            "fieldname": "amount",
+            "fieldtype": "Currency",
+            "label": "Amount"
+        },
+        {
+            "fieldname": "sender_name",
+            "fieldtype": "Data",
+            "label": "Sender Name"
+        },
+        {
+            "fieldname": "date",
+            "fieldtype": "Date",
+            "label": "Date"
+        },
+        {
+            "fieldname": "section_break_ref",
+            "fieldtype": "Section Break",
+            "label": "Reference"
+        },
+        {
+            "fieldname": "reference_doctype",
+            "fieldtype": "Link",
+            "label": "Reference DocType",
+            "options": "DocType"
+        },
+        {
+            "fieldname": "reference_name",
+            "fieldtype": "Dynamic Link",
+            "label": "Reference Name",
+            "options": "reference_doctype"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2026-03-19 20:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Memby",
+    "name": "Bank Transaction",
+    "naming_rule": "Expression",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Administrator",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "memby-manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "creation",
+    "sort_order": "DESC",
+    "track_changes": 1
+}
