@@ -11,15 +11,15 @@ app_license = "mit"
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
-add_to_apps_screen = [
-	{
-		"name": "memby",
-		"logo": "/assets/memby/Logo.png",
-		"title": "Memby",
-		"route": "/app/dashboard"
-		#"has_permission": "memby.api.permission.has_app_permission"
-	}
-]
+# add_to_apps_screen = [
+# 	{
+# 		"name": "memby",
+# 		"logo": "/assets/memby/Logo.png",
+# 		"title": "Memby",
+# 		"route": "/desk/member"
+# 		#"has_permission": "memby.api.permission.has_app_permission"
+# 	}
+# ]
 
 # Includes in <head>
 # ------------------

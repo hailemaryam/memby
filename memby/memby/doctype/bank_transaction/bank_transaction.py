@@ -83,3 +83,40 @@ class BankTransaction(Document):
 					frappe.msgprint(f"Automatically created and submitted Membership Income: {mi_doc.name}")
 				except Exception:
 					frappe.log_error(title="Auto-creation of Membership Income Failed", message=frappe.get_traceback())
+
+def link_to_bank_transaction(doc, method):
+	"""
+	Hook function to link a manually created Income/Expense record to a Bank Transaction 
+	if the transaction_id matches and the Bank Transaction is not yet linked.
+	"""
+	if doc.transaction_id:
+		# 1. Check if this document is already linked to a Bank Transaction
+		# This prevents circular calls when Bank Transaction creates Membership Income
+		is_already_linked = frappe.db.exists("Bank Transaction", {"reference_name": doc.name})
+		if is_already_linked:
+			return
+
+		# 2. Search for an unlinked Bank Transaction with the same transaction_id
+		bt_name = frappe.db.get_value("Bank Transaction", 
+			{"transaction_id": doc.transaction_id, "reference_name": ""}, 
+			"name")
+		
+		if bt_name:
+			frappe.db.set_value("Bank Transaction", bt_name, {
+				"reference_doctype": doc.doctype,
+				"reference_name": doc.name
+			})
+			frappe.msgprint(f"Linked to Bank Transaction: {bt_name}")
+
+def unlink_from_bank_transaction(doc, method):
+	"""
+	Hook function to unlink a Bank Transaction when the associated Income/Expense 
+	record is cancelled.
+	"""
+	bt_name = frappe.db.get_value("Bank Transaction", {"reference_name": doc.name}, "name")
+	if bt_name:
+		frappe.db.set_value("Bank Transaction", bt_name, {
+			"reference_doctype": "",
+			"reference_name": ""
+		})
+		frappe.msgprint(f"Unlinked from Bank Transaction: {bt_name}")
