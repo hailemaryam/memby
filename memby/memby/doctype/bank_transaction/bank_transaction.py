@@ -14,6 +14,23 @@ class BankTransaction(Document):
 		# Auto-create Membership Income if conditions are met
 		if self.type == "Credit" and self.sender_name and self.bank_account_number and not self.reference_name:
 			self.auto_link_membership_income()
+		
+		# If still not linked, try to link to any existing record with the same transaction_id
+		if not self.reference_name and self.transaction_id:
+			self.link_to_existing_reference()
+
+	def link_to_existing_reference(self):
+		"""
+		Try to find an existing record (Membership Income, Other Income, Expense, Internal Transfer)
+		 that has the same transaction_id and link to it.
+		"""
+		for doctype in ["Membership Income", "Other Income", "Expense", "Internal Transfer"]:
+			ref_name = frappe.db.get_value(doctype, {"transaction_id": self.transaction_id}, "name")
+			if ref_name:
+				self.db_set("reference_doctype", doctype)
+				self.db_set("reference_name", ref_name)
+				frappe.msgprint(f"Automatically linked to existing {doctype}: {ref_name}")
+				break
 
 	def parse_message(self):
 		message = self.message

@@ -96,6 +96,18 @@
    "icon": "arrow-right-left",
    "indent": 0,
    "keep_closed": 0,
+   "label": "Internal Transfer",
+   "link_to": "Internal Transfer",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "arrow-right-left",
+   "indent": 0,
+   "keep_closed": 0,
    "label": "Bank Transaction",
    "link_to": "Bank Transaction",
    "link_type": "DocType",
