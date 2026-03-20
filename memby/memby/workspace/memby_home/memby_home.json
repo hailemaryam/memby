@@ -1,0 +1,57 @@
+{
+    "charts": [
+        {
+            "chart_name": "Membership Income",
+            "label": "Membership Income"
+        },
+        {
+            "chart_name": "Other Income",
+            "label": "Other Income"
+        },
+        {
+            "chart_name": "Expences",
+            "label": "Expences"
+        }
+    ],
+    "content": "[{\"type\":\"header\",\"data\":{\"text\":\"Number Cards\",\"level\":4}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Member\",\"col\":4}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Prepayments\",\"col\":4}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Male Member\",\"col\":4}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Female Member\",\"col\":4}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Unpaid Total\",\"col\":4}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Bank Account Balance\",\"col\":4}},{\"type\":\"header\",\"data\":{\"text\":\"Charts\",\"level\":4}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Membership Income\",\"col\":12}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Other Income\",\"col\":12}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Expences\",\"col\":12}}]",
+    "creation": "2026-03-21 10:00:00",
+    "docstatus": 0,
+    "doctype": "Workspace",
+    "idx": 0,
+    "is_standard": 1,
+    "label": "Memby Home",
+    "modified": "2026-03-20 10:00:00",
+    "modified_by": "Administrator",
+    "module": "Memby",
+    "name": "Memby Home",
+    "number_cards": [
+        {
+            "label": "Total Member",
+            "number_card_name": "Total Member"
+        },
+        {
+            "label": "Male Member",
+            "number_card_name": "Male Member"
+        },
+        {
+            "label": "Female Member",
+            "number_card_name": "Female Member"
+        },
+        {
+            "label": "Total Prepayments",
+            "number_card_name": "Total Prepayments"
+        },
+        {
+            "label": "Unpaid Total",
+            "number_card_name": "Unpaid Total"
+        },
+        {
+            "label": "Bank Account Balance",
+            "number_card_name": "Bank Account Balance"
+        }
+    ],
+    "owner": "Administrator",
+    "public": 1,
+    "standard": "Yes",
+    "title": "Memby Home"
+}
