@@ -96,12 +96,15 @@ def link_to_bank_transaction(doc, method):
 		if is_already_linked:
 			return
 
-		# 2. Search for an unlinked Bank Transaction with the same transaction_id
-		bt_name = frappe.db.get_value("Bank Transaction", 
-			{"transaction_id": doc.transaction_id, "reference_name": ""}, 
-			"name")
+		# 2. Search for a Bank Transaction with the same transaction_id
+		# Use get_value with only transaction_id to be robust against NULL vs "" in reference_name
+		bt_data = frappe.db.get_value("Bank Transaction", 
+			{"transaction_id": doc.transaction_id}, 
+			["name", "reference_name"], as_dict=True)
 		
-		if bt_name:
+		# 3. If found and not already linked to something else
+		if bt_data and not bt_data.reference_name:
+			bt_name = bt_data.name
 			frappe.db.set_value("Bank Transaction", bt_name, {
 				"reference_doctype": doc.doctype,
 				"reference_name": doc.name
@@ -116,7 +119,7 @@ def unlink_from_bank_transaction(doc, method):
 	bt_name = frappe.db.get_value("Bank Transaction", {"reference_name": doc.name}, "name")
 	if bt_name:
 		frappe.db.set_value("Bank Transaction", bt_name, {
-			"reference_doctype": "",
-			"reference_name": ""
+			"reference_doctype": None,
+			"reference_name": None
 		})
 		frappe.msgprint(f"Unlinked from Bank Transaction: {bt_name}")
