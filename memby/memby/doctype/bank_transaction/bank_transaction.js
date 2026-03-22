@@ -55,7 +55,7 @@ function create_linked_doc(frm, doctype) {
 		
 		// Handle date/time fields based on doctype requirements
 		if (doctype === 'Membership Income' || doctype === 'Internal Transfer') {
-			route_params['time'] = frm.doc.date ? (frm.doc.date + " " + frappe.datetime.get_time()) : frappe.datetime.now_datetime();
+			route_params['time'] = frm.doc.date ? (frm.doc.date + " 00:00:00") : frappe.datetime.now_datetime();
 		} else {
 			route_params['date'] = frm.doc.date || frappe.datetime.get_today();
 		}

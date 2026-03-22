@@ -13,6 +13,10 @@ class InternalTransfer(Document):
 		if self.amount <= 0:
 			frappe.throw("Amount must be greater than zero.")
 
+	def on_update(self):
+		# Link to Bank Transaction if exists
+		link_to_bank_transaction(self, "on_update")
+
 	def on_submit(self):
 		# Decrease balance of from_bank_account
 		from_bank = frappe.get_doc("Bank Account Balance", self.from_bank_account)
@@ -23,9 +27,6 @@ class InternalTransfer(Document):
 		to_bank = frappe.get_doc("Bank Account Balance", self.to_bank_account)
 		to_bank.remaining_balance += self.amount
 		to_bank.save()
-
-		# Link to Bank Transaction if exists
-		link_to_bank_transaction(self, "on_submit")
 
 	def on_cancel(self):
 		# Revert decrease balance of from_bank_account
