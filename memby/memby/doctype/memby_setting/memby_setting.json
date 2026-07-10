@@ -14,8 +14,10 @@
   "penality_percent",
   "penality_amount",
   "sms_gatway_conf_section",
+  "enable_sms_notifications",
   "sms_gateway_user",
-  "sms_gateway_password"
+  "sms_gateway_password",
+  "sms_payment_reminder_message"
  ],
  "fields": [
   {
@@ -68,14 +70,29 @@
    "label": "Sms Gatway Conf"
   },
   {
+   "default": "0",
+   "fieldname": "enable_sms_notifications",
+   "fieldtype": "Check",
+   "label": "Enable SMS Notifications"
+  },
+  {
+   "depends_on": "eval:doc.enable_sms_notifications",
    "fieldname": "sms_gateway_user",
    "fieldtype": "Data",
    "label": "Sms Gateway User"
   },
   {
+   "depends_on": "eval:doc.enable_sms_notifications",
    "fieldname": "sms_gateway_password",
-   "fieldtype": "Data",
+   "fieldtype": "Password",
    "label": "Sms Gateway Password"
+  },
+  {
+   "default": "Dear {full_name}, you have an unpaid balance of {unpaid_total}. Please settle your payment. - {company_name}",
+   "depends_on": "eval:doc.enable_sms_notifications",
+   "fieldname": "sms_payment_reminder_message",
+   "fieldtype": "Small Text",
+   "label": "SMS Payment Reminder Message"
   }
  ],
  "grid_page_length": 50,
@@ -83,7 +100,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-10-29 16:47:37.039542",
+ "modified": "2026-07-10 19:01:00.000000",
  "modified_by": "Administrator",
  "module": "Memby",
  "name": "Memby Setting",

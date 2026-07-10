@@ -241,8 +241,13 @@ app_license = "mit"
 scheduler_events = {
     "weekly": [
         "memby.memby.my_custom_functions.payment_term_creator.create_payment_terms_for_members",
-        "memby.memby.my_custom_functions.penality_applier.apply_penalties"
-    ]
+        "memby.memby.my_custom_functions.penality_applier.apply_penalties",
+    ],
+    "cron": {
+        "0 9 1,16 * *": [
+            "memby.memby.my_custom_functions.payment_sms_notifier.send_payment_reminders",
+        ],
+    },
 }
 jinja = {
     "methods": [
