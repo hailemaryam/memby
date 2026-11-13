@@ -88,6 +88,11 @@ app_license = "mit"
 # before_install = "memby.install.before_install"
 # after_install = "memby.install.after_install"
 
+after_migrate = ["memby.mcp.setup.after_migrate"]
+
+# MCP connector audit log: keep 180 days (cleared by Log Settings job)
+default_log_clearing_doctypes = {"MCP Audit Log": 180}
+
 # Uninstallation
 # ------------
 
