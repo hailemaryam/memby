@@ -94,20 +94,30 @@ cp "$(dirname "$(readlink -f "$0")")/restore.sh" "$OUT/restore.sh" 2>/dev/null |
 base="$RCLONE_REMOTE"
 case "$base" in *:) ;; *) base="${base%/}/" ;; esac
 DEST="${base}$SITE/$STAMP"
-log "uploading to $DEST"
-"$RCLONE_BIN" copy "$OUT" "$DEST" --exclude '.lock'
-# --download: crypt remotes have no hashes, so compare actual content.
-"$RCLONE_BIN" check "$OUT" "$DEST" --one-way --download --exclude '.lock'
-log "upload verified"
 
-# Prune remote: keep newest KEEP_WEEKS folders.
-SITE_REMOTE="${DEST%/*}"
-mapfile -t remote_dirs < <("$RCLONE_BIN" lsf --dirs-only "$SITE_REMOTE" | sed 's#/$##' | sort)
-if [ "${#remote_dirs[@]}" -gt "$KEEP_WEEKS" ]; then
-	for d in "${remote_dirs[@]:0:${#remote_dirs[@]}-KEEP_WEEKS}"; do
-		log "pruning remote $d"
-		"$RCLONE_BIN" purge "$SITE_REMOTE/$d"
-	done
+# Checksums, so whoever copies the set (rclone or a pull over SSH) can verify it.
+(cd "$OUT" && sha256sum -- * > SHA256SUMS)
+
+if [ "$RCLONE_REMOTE" = "none" ]; then
+	# Off-site copy is pulled by another machine over SSH (see pull-backup.ps1).
+	DEST="$OUT"
+	log "upload skipped (RCLONE_REMOTE=none)"
+else
+	log "uploading to $DEST"
+	"$RCLONE_BIN" copy "$OUT" "$DEST" --exclude '.lock'
+	# --download: crypt remotes have no hashes, so compare actual content.
+	"$RCLONE_BIN" check "$OUT" "$DEST" --one-way --download --exclude '.lock'
+	log "upload verified"
+
+	# Prune remote: keep newest KEEP_WEEKS folders.
+	SITE_REMOTE="${DEST%/*}"
+	mapfile -t remote_dirs < <("$RCLONE_BIN" lsf --dirs-only "$SITE_REMOTE" | sed 's#/$##' | sort)
+	if [ "${#remote_dirs[@]}" -gt "$KEEP_WEEKS" ]; then
+		for d in "${remote_dirs[@]:0:${#remote_dirs[@]}-KEEP_WEEKS}"; do
+			log "pruning remote $d"
+			"$RCLONE_BIN" purge "$SITE_REMOTE/$d"
+		done
+	fi
 fi
 
 # Prune local: keep newest KEEP_LOCAL folders.
@@ -119,3 +129,4 @@ if [ "${#local_dirs[@]}" -gt "$KEEP_LOCAL" ]; then
 fi
 
 log "=== done: $DEST ==="
+echo "$OUT" > "$LOCAL_DIR/LATEST"

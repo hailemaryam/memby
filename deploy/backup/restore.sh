@@ -10,6 +10,7 @@
 #   ./restore.sh                 # restore the newest backup
 #   ./restore.sh 2026-11-22_0230 # restore a specific backup folder
 #   ./restore.sh --list          # list available backups
+#   ./restore.sh /path/to/set    # restore a set that is already on this machine (no rclone needed)
 #
 # Env overrides: BENCH_DIR, SITE, RCLONE_REMOTE, DB_ROOT_PASSWORD, ADMIN_PASSWORD,
 #                PIN_COMMITS=1 (checkout exact app commits from the manifest)
@@ -31,7 +32,15 @@ if [ "${1:-}" = "--list" ]; then
 	exit 0
 fi
 
-WHICH="${1:-$(rclone lsf --dirs-only "$SITE_REMOTE" | sed 's#/$##' | sort | tail -1)}"
+# A backup set already on this machine (e.g. copied from the PC that pulls them):
+#   ./restore.sh /path/to/2026-11-22_0230
+LOCAL_SET=""
+if [ -n "${1:-}" ] && [ -d "$1" ]; then
+	LOCAL_SET="$(cd "$1" && pwd)"
+	WHICH="$(basename "$LOCAL_SET")"
+else
+	WHICH="${1:-$(rclone lsf --dirs-only "$SITE_REMOTE" | sed 's#/$##' | sort | tail -1)}"
+fi
 [ -n "$WHICH" ] || { echo "no backups found at $SITE_REMOTE" >&2; exit 1; }
 
 if [ -d "$BENCH_DIR/sites/$SITE" ] && [ "${FORCE:-0}" != "1" ]; then
@@ -40,10 +49,19 @@ if [ -d "$BENCH_DIR/sites/$SITE" ] && [ "${FORCE:-0}" != "1" ]; then
 	exit 1
 fi
 
-WORK="$BENCH_DIR/restore-tmp/$WHICH"
-mkdir -p "$WORK"
-echo ">> downloading $SITE_REMOTE/$WHICH -> $WORK"
-rclone copy "$SITE_REMOTE/$WHICH" "$WORK"
+if [ -n "$LOCAL_SET" ]; then
+	WORK="$LOCAL_SET"
+	echo ">> using local backup set $WORK"
+else
+	WORK="$BENCH_DIR/restore-tmp/$WHICH"
+	mkdir -p "$WORK"
+	echo ">> downloading $SITE_REMOTE/$WHICH -> $WORK"
+	rclone copy "$SITE_REMOTE/$WHICH" "$WORK"
+fi
+if [ -f "$WORK/SHA256SUMS" ]; then
+	(cd "$WORK" && sha256sum -c --quiet SHA256SUMS) || { echo "checksum mismatch in $WORK" >&2; exit 1; }
+	echo ">> checksums OK"
+fi
 
 db_file="$(compgen -G "$WORK/*-database.sql.gz" | head -1)"
 pub_file="$(compgen -G "$WORK/*files.t*" | grep -v private-files | head -1)"
