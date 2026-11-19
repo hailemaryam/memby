@@ -46,7 +46,7 @@ Weekly task (Sunday 10:00; runs as soon as possible after the PC is back on if i
 ```powershell
 $a = New-ScheduledTaskAction -Execute powershell.exe -Argument '-NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "C:\path\to\memby\deploy\backup\pull-backup.ps1" -Server root@<prod-server-ip>'
 $t = New-ScheduledTaskTrigger -Weekly -DaysOfWeek Sunday -At 10am
-$s = New-ScheduledTaskSettingsSet -StartWhenAvailable -RunOnlyIfNetworkAvailable -ExecutionTimeLimit (New-TimeSpan -Hours 1)
+$s = New-ScheduledTaskSettingsSet -StartWhenAvailable -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -ExecutionTimeLimit (New-TimeSpan -Hours 1)
 Register-ScheduledTask -TaskName "Memby zedir backup" -Action $a -Trigger $t -Settings $s
 ```
 
